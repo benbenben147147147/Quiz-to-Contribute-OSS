@@ -7,9 +7,16 @@ This tutorial will guide you through the whole process step by step.
 #### Guide
 
 1. Create a fork of this repository. This will be your personal copy if this project.
-![forking](docs/images/forking.png | width=150)
+<div align="center">
+<img src="docs/images/forking.png" width="350">
+</div>
+
 2. Next, clone (copy) your fork on your local machine. Therefore, copy the web URL of your newly created fork.
-![copy_web_url](docs/images/copy_web_url.png | width=150)
+
+<div align="center">
+<img src="docs/images/copy_web_url.png" width="350">
+</div>
+
 3. Open a terminal on your machine and execute the following command (this will download your fork into the current location on your machine):
 ```
 git clone <your-web-url>
