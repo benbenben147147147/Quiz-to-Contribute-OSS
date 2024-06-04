@@ -6,4 +6,25 @@
     "Answer_possibilities": ["Paris","London","Rome","Athens"],
     "Correct_answer": 3
   },
+  {
+    "question_id": 2,
+    "category": "Countries",
+    "question": "What is the capital of India?",
+    "Answer_possibilities": ["Paris","New Delhi","Mumbai","Athens"],
+    "Correct_answer": 1
+  },
+  {
+    "question_id": 3,
+    "category": "Countries",
+    "question": "What is the largest country in the world",
+    "Answer_possibilities": ["China","Russia","USA","India"],
+    "Correct_answer": 1
+  },
+  {
+    "question_id": 4,
+    "category": "Countries",
+    "question": "What is the highest mountain",
+    "Answer_possibilities": ["Everest","KanchanGanga","Alps","K2"],
+    "Correct_answer": 0
+  }
 ]
