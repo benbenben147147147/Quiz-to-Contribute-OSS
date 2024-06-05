@@ -6,4 +6,25 @@
     "Answer_possibilities": ["Paris","London","Rome","Athens"],
     "Correct_answer": 3
   },
+  {
+    "question_id": 2,
+    "category": "Countries",
+    "question": "What is the capital of Russia?",
+    "Answer_possibilities": ["Moscow","Libanon","Berlin","Madrid"],
+    "Correct_answer": 1
+  },
+  {
+    "question_id": 3,
+    "category": "Countries",
+    "question": "What is the capital of Argentina?",
+    "Answer_possibilities": ["Oslo","Tokyo","Dublin","Rio De Janeiro"],
+    "Correct_answer": 4
+  },
+  {
+    "question_id": 4,
+    "category": "Seas and Oceans",
+    "question": "What is the largest ocean in the world?",
+    "Answer_possibilities": ["Atlantic","Pacific","Arctic","Indian"],
+    "Correct_answer": 2
+  }
 ]
