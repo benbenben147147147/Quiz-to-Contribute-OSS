@@ -1,8 +1,5 @@
 body{
   background-color: #dadada;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .nav__container {
