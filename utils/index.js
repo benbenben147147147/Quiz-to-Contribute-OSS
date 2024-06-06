@@ -40,6 +40,7 @@ fetch('questions.json')
                 displayQuestion(currentQuestionIndex);  // Display the next question
               } else {
                 container.innerHTML = '<div class="text-lg font-bold item-center justify-center text-center">Quiz Completed!</div>'; //yayy compelted
+                clearInterval(window.intervalId); // stop the timer when the user completes the quiz
               }
             }, 1000);  // Wait 1 second before showing the next question
           } else {
