@@ -5,3 +5,4 @@
 - [Antoine](https://github.com/antoinecoulon)
 - [Pranshu](https://github.com/Theewebwizard)
 - [Moustapha](https://github.com/mdiab1)
+- [Aaditya](https://github.com/aaditya-singh-21)
