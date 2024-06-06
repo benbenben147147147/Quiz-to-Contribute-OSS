@@ -46,5 +46,41 @@
       {"option": "K2", "info": "K2 is the second highest mountain in the world."}
     ],
     "Correct_answer": 0
+  },
+  {
+    "question_id": 5,
+    "category": "Countries",
+    "question": "What is the capital of Japan?",
+    "Answer_possibilities": [
+      {"option": "Beijing", "info": "Beijing is the capital of China."},
+      {"option": "Cairo", "info": "Cairo is the capital of Egypt."},
+      {"option": "Bucharest", "info": "Bucharest is the capital of Romania."},
+      {"option": "Tokyo", "info": "Tokyo is the capital of Japan."}
+    ],
+    "Correct_answer": 3
+  },
+  {
+    "question_id": 6,
+    "category": "Countries",
+    "question": "What is the capital of Australia?",
+    "Answer_possibilities": [
+      {"option": "Vienna", "info": "Vienna is the capital of Austria."},
+      {"option": "Canberra", "info": "Canberra is the capital of Australia."},
+      {"option": "Washington", "info": "Washington is the capital of USA."},
+      {"option": "Ottawa", "info": "Ottawa is the capital of Canada."}
+    ],
+    "Correct_answer": 1
+  },
+  {
+    "question_id": 7,
+    "category": "Countries",
+    "question": "What is the capital of Mexico?",
+    "Answer_possibilities": [
+      {"option": "Wellington", "info": "Wellington is the capital of New Zeland."},
+      {"option": "San Diago", "info": "San Diago is the capital of Chile."},
+      {"option": "Mexico City", "info": "Mexico City is the capital of Mexico."},
+      {"option": "Buenos Aires", "info": "Buenos Aires is the capital of Argentina."}
+    ],
+    "Correct_answer": 2
   }
 ]
