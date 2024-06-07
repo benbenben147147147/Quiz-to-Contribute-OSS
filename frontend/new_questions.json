@@ -1,0 +1,602 @@
+[
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Deuterium is an isotope of which element?",
+        "correct_answer": "Hydrogen",
+        "incorrect_answers": [
+            "Nitrogen",
+            "Helium",
+            "Neon"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "How many legs is it biologically impossible for a centipede to have?",
+        "correct_answer": "100",
+        "incorrect_answers": [
+            "26",
+            "50",
+            "74"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "To the nearest minute, how long does it take for light to travel from the Sun to the Earth?",
+        "correct_answer": "8 Minutes",
+        "incorrect_answers": [
+            "6 Minutes",
+            "2 Minutes",
+            "12 Minutes"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "What is the same in Celsius and Fahrenheit?",
+        "correct_answer": "-40",
+        "incorrect_answers": [
+            "32",
+            "-39",
+            "-42"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Which one of these scientists conducted the Gold Foil Experiment which concluded that atoms are mostly made of empty space?",
+        "correct_answer": "Ernest Rutherford",
+        "incorrect_answers": [
+            "Joseph John Thomson",
+            "Archimedes",
+            "Niels Henrik David Bohr"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "Which horizon in a soil profile consists of bedrock?",
+        "correct_answer": "R",
+        "incorrect_answers": [
+            "O",
+            "B",
+            "D"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Where did the dog breed Chihuahua; originate?",
+        "correct_answer": "Mexico",
+        "incorrect_answers": [
+            "France",
+            "Spain",
+            "Russia"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "What is the name for the auditory illusion of a note that seems to be rising infinitely?",
+        "correct_answer": "Shepard Tone",
+        "incorrect_answers": [
+            "Glissandro Illusion",
+            "Fransen Effect",
+            "McGurck Effect"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "What is the molecular formula of Glucose?",
+        "correct_answer": "C6H12O6",
+        "incorrect_answers": [
+            "C2H4O2",
+            "K+",
+            "CH4"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "The Tibia is found in which part of the body?",
+        "correct_answer": "Leg",
+        "incorrect_answers": [
+            "Arm",
+            "Hand",
+            "Head"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "Which scientific unit is named after an Italian nobleman?",
+        "correct_answer": "Volt",
+        "incorrect_answers": [
+            "Pascal",
+            "Ohm",
+            "Hertz"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "In aeronautics, flaps and slats are used to control what on an aircraft?",
+        "correct_answer": "Lift",
+        "incorrect_answers": [
+            "Thrust",
+            "Drag",
+            "Weight "
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "The core of the Sun can reach which temperature?",
+        "correct_answer": "27deg; Million F (15deg; Million C)",
+        "incorrect_answers": [
+            "938,000deg; F (521093.3deg; C)",
+            "8deg; Billion F (deg;4.4 Billion C)",
+            "Absolute Zero (Both F and C)"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Which desert is the only desert in the world where the Saguaro cactus grows indigenously?",
+        "correct_answer": "The Sonoran Desert",
+        "incorrect_answers": [
+            "The Gobi Desert",
+            "The Yuma Desert",
+            "The Arabian Desert"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "In the Scoville scale, what is the hottest chemical?",
+        "correct_answer": "Resiniferatoxin",
+        "incorrect_answers": [
+            "Capsaicin",
+            "Dihydrocapsaicin",
+            "Tinyatoxin"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "What physics principle relates the net electric flux out of a closed surface to the charge enclosed by that surface?",
+        "correct_answer": "Gauss&#039;s Law",
+        "incorrect_answers": [
+            "Faraday&#039;s Law",
+            "Ampere&#039;s Law",
+            "Biot-Savart Law"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Science & Nature",
+        "question": "Rhinoplasty is a surgical procedure on what part of the human body?",
+        "correct_answer": "Nose",
+        "incorrect_answers": [
+            "Ears",
+            "Chin",
+            "Neck"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "What is the scientific name of the knee cap?",
+        "correct_answer": "Patella",
+        "incorrect_answers": [
+            "Femur",
+            "Foramen Magnum",
+            "Scapula"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Science & Nature",
+        "question": "What is the atomic mass of Carbon?",
+        "correct_answer": "12",
+        "incorrect_answers": [
+            "14",
+            "16",
+            "10"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Which color cannot be produced in Roses, even through genetic alteration?",
+        "correct_answer": "Blue",
+        "incorrect_answers": [
+            "Black",
+            "Orange",
+            "Brown"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Which chemical element has the lowest boiling point?",
+        "correct_answer": "Helium",
+        "incorrect_answers": [
+            "Hydrogen",
+            "Neon",
+            "Nitrogen"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "Which of the following are cells of the adaptive immune system?",
+        "correct_answer": "Cytotoxic T cells",
+        "incorrect_answers": [
+            "Dendritic cells",
+            "Natural killer cells",
+            "White blood cells"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Approximately how long is a year on Uranus?",
+        "correct_answer": "84 Earth years",
+        "incorrect_answers": [
+            "47 Earth years",
+            "62 Earth years",
+            "109 Earth years"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "Where is the Gluteus Maximus muscle located?",
+        "correct_answer": "Butt",
+        "incorrect_answers": [
+            "Arm",
+            "Head",
+            "Torso"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "What do you study if you are studying entomology?",
+        "correct_answer": "Insects",
+        "incorrect_answers": [
+            "Humans",
+            "the Brain",
+            "Fish"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Science & Nature",
+        "question": "What is the first element on the periodic table?",
+        "correct_answer": "Hydrogen",
+        "incorrect_answers": [
+            "Helium",
+            "Oxygen",
+            "Lithium"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Gannymede is the largest moon of which planet?",
+        "correct_answer": "Jupiter",
+        "incorrect_answers": [
+            "Uranus",
+            "Neptune",
+            "Mars"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "How old is the universe?",
+        "correct_answer": "13.8 Billion Years",
+        "incorrect_answers": [
+            "4.5 Billion Years",
+            "7.9 Billion Years",
+            "16.2 Billion Years"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "The word science stems from the word scire meaning what?",
+        "correct_answer": "To know",
+        "incorrect_answers": [
+            "To measure",
+            "To live",
+            "To count"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Which of these choices is not one of the phases of mitosis?",
+        "correct_answer": "Diplophase",
+        "incorrect_answers": [
+            "Metaphase",
+            "Anaphase",
+            "Telophase"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "After which Danish city is the 72th element on the periodic table named?",
+        "correct_answer": "Copenhagen",
+        "incorrect_answers": [
+            "Odense",
+            "Herning",
+            "Skagen"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "How many protons are in an oxygen atom?",
+        "correct_answer": "Eight",
+        "incorrect_answers": [
+            "Four",
+            "Two",
+            "Six"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Science & Nature",
+        "question": "What does DNA stand for?",
+        "correct_answer": "Deoxyribonucleic Acid",
+        "incorrect_answers": [
+            "Deoxyribogenetic Acid",
+            "Deoxyribogenetic Atoms",
+            "Detoxic Acid"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "A positron is an antiparticle of a what?",
+        "correct_answer": "Electron",
+        "incorrect_answers": [
+            "Neutron",
+            "Proton",
+            "Photon"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "What is the scientific name for the extinct hominin known as Lucy?",
+        "correct_answer": "Australopithecus Afarensis",
+        "incorrect_answers": [
+            "Australopithecus Africanus",
+            "Australopithecus Architeuthis",
+            "Australopithecus Antaris"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "On which mission did the Space Shuttle Columbia break up upon re-entry?",
+        "correct_answer": "STS-107",
+        "incorrect_answers": [
+            "STS-51-L",
+            "STS-61-C",
+            "STS-109"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "What common name is given to the medial condition, tibial stress syndrome (MTSS)?",
+        "correct_answer": "Shin Splints",
+        "incorrect_answers": [
+            "Tennis Elbow",
+            "Carpal Tunnel",
+            "Housemaid&#039;s Knee"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Science & Nature",
+        "question": "What is the official name of the star located closest to the North Celestial Pole?",
+        "correct_answer": "Polaris",
+        "incorrect_answers": [
+            "Eridanus",
+            "Gamma Cephei",
+            "Iota Cephei"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Science & Nature",
+        "question": "Human cells typically have how many copies of each gene?",
+        "correct_answer": "2",
+        "incorrect_answers": [
+            "1",
+            "4",
+            "3"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Science & Nature",
+        "question": "How many bones are in the human body?",
+        "correct_answer": "206",
+        "incorrect_answers": [
+            "203",
+            "209",
+            "200"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "What does the yellow diamond on the NFPA 704 fire diamond represent?",
+        "correct_answer": "Reactivity",
+        "incorrect_answers": [
+            "Health",
+            "Flammability",
+            "Radioactivity"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "What is the Linnean name of the domestic apple tree?",
+        "correct_answer": "Malus pumila",
+        "incorrect_answers": [
+            "Malus americana",
+            "Pomus domestica",
+            "Appelus delectica"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "What is the molecular formula of the active component of chili peppers(Capsaicin)?",
+        "correct_answer": "C18H27NO3",
+        "incorrect_answers": [
+            "C21H23NO3",
+            "C6H4Cl2",
+            "C13H25NO4"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Science & Nature",
+        "question": "Which of the following bones is not in the leg?",
+        "correct_answer": "Radius",
+        "incorrect_answers": [
+            "Patella",
+            "Tibia",
+            "Fibula "
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "What genetic disease is caused by having an extra Y chromosome (XYY)?",
+        "correct_answer": "Jacob&#039;s Syndrome",
+        "incorrect_answers": [
+            "Klinefelter&#039;s Syndrome",
+            "Turner&#039;s Syndrome",
+            "Down Syndrome"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "Which of the following plastic is commonly used for window frames, gutters and drain pipes?",
+        "correct_answer": "Polyvinylchloride (PVC) ",
+        "incorrect_answers": [
+            "Polyethylene (PE)",
+            "Polypropylene (PP)",
+            "Polystyrene (PS)"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "Which planet did the Viking 1 spacecraft send surface images of, starting in 1976?",
+        "correct_answer": "Mars",
+        "incorrect_answers": [
+            "Saturn",
+            "Jupiter",
+            "Venus"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science & Nature",
+        "question": "What is the scientific term for &#039;taste&#039;?",
+        "correct_answer": "Gustatory Perception",
+        "incorrect_answers": [
+            "Olfaction",
+            "Somatosensation",
+            "Auditory Perception"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Science & Nature",
+        "question": "Which is the longest bone in the human body? ",
+        "correct_answer": "Femur",
+        "incorrect_answers": [
+            "Scapula",
+            "Fibula",
+            "Ulna"
+        ]
+    },
+    {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Science & Nature",
+        "question": "The &#039;Islets of Langerhans&#039; is found in which human organ?",
+        "correct_answer": "Pancreas",
+        "incorrect_answers": [
+            "Kidney",
+            "Liver",
+            "Brain"
+        ]
+    }
+]
