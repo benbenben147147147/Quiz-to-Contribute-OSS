@@ -3,7 +3,7 @@
 ![Static Badge](https://img.shields.io/badge/good_first_issue-orange)
 
 
-## How to run it?
+## How to run the App?
 
 Fork the repository (as described in [First Contribution Tutorial](https://github.com/benbenben147147147/Quiz-to-Contribute-OSS/blob/main/CONTRIBUTE_LEVEL_1.md))
 
