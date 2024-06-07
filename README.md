@@ -13,14 +13,24 @@ Clone the repository to your local machine:
 git clone git@github.com:<name-of-your-fork>/Quiz-to-Contribute-OSS.git
 ```
 
+Navigate into the /backend directory of the project:
+```
+cd backend
+```
+
 Install all node dependencies:
 ```
 npm install
 ```
 
+Run the build process (mainly for tailwind):
+```
+npm run build
+```
+
 Run the node server:
 ```
-npm start
+npm run start
 ```
 
 Visit the webapp on:

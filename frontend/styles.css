@@ -1,4 +1,8 @@
-body{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
   background-color: #dadada;
 }
 
@@ -12,7 +16,7 @@ body{
 
 }
 
-.nav__settings img{
+.nav__settings img {
   width: 20px;
   height: 20px;
   margin-right: 5px;
@@ -21,22 +25,38 @@ body{
 
 .nav__settings a {
   display: flex;
-  align-items: center; /* Align items vertically centered */
-  text-decoration: none; /* Remove underline from link */
-  color: inherit; /* Inherit color for text */
+  align-items: center;
+  /* Align items vertically centered */
+  text-decoration: none;
+  /* Remove underline from link */
+  color: inherit;
+  /* Inherit color for text */
 }
 
 @keyframes tilt-shaking {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 
-div ul:hover{
+div ul:hover {
   animation: tilt-shaking 0.4s;
   cursor: pointer;
 }
-
