@@ -1,7 +1,9 @@
+const MAX_QUESTIONS = 7;
 // Fetch the JSON file containing questions
 fetch('questions.json')
   .then(response => response.json())  // Convert the response to JSON
   .then(data => {
+    const numberOfQuestions = Math.min(MAX_QUESTIONS, data.length);
     let currentQuestionIndex = 0;  // Track the current question index
 
     const container = document.getElementById('container');  // Get the container element
@@ -36,7 +38,7 @@ fetch('questions.json')
             resultMessage.className = 'mt-4 text-lg font-bold text-green-500';
             currentQuestionIndex++;  // Move to the next question
             setTimeout(() => {
-              if (currentQuestionIndex < data.length) {
+              if (currentQuestionIndex < numberOfQuestions) {
                 displayQuestion(currentQuestionIndex);  // Display the next question
               } else {
                 container.innerHTML = '<div class="text-lg font-bold item-center justify-center text-center">Quiz Completed!</div>'; //yayy compelted
