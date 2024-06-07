@@ -6,3 +6,6 @@ backend/node_modules
 
 # IntelliJ IDEA files
 .idea/*
+
+# output.css for the frontend (tailwind)
+frontend/output.css
