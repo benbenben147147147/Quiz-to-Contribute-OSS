@@ -3,6 +3,32 @@
 ![Static Badge](https://img.shields.io/badge/good_first_issue-orange)
 
 
+## How to run it?
+
+Fork the repository (as described in [First Contribution Tutorial](https://github.com/benbenben147147147/Quiz-to-Contribute-OSS/blob/main/CONTRIBUTE_LEVEL_1.md))
+
+
+Clone the repository to your local machine:
+```
+git clone git@github.com:<name-of-your-fork>/Quiz-to-Contribute-OSS.git
+```
+
+Install all node dependencies:
+```
+npm install
+```
+
+Run the node server:
+```
+npm start
+```
+
+Visit the webapp on:
+```
+http://localhost:3000
+```
+
+
 ## Welcome to _"Quiz App"_
 
 You are new to development, GitHub, or Open Source Software (OSS) projects?
