@@ -1,2 +1,8 @@
 # Operating system files
 .DS_Store
+
+# Node.js files
+backend/node_modules
+
+# IntelliJ IDEA files
+.idea/*
