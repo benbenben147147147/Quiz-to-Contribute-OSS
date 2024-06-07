@@ -1,6 +1,7 @@
+import {shuffle} from "./shuffle.js";
 const MAX_QUESTIONS = 7;
 // Fetch the JSON file containing questions
-fetch('questions.json')
+fetch('new_questions.json')
   .then(response => response.json())  // Convert the response to JSON
   .then(data => {
     const numberOfQuestions = Math.min(MAX_QUESTIONS, data.length);
@@ -24,15 +25,15 @@ fetch('questions.json')
       answersList.className = 'space-y-2';
       resultMessage.className = 'mt-4 text-lg font-bold';
 
-      // Loop through each answer possibility and create a div for each
-      item.Answer_possibilities.forEach((answer, answerIndex) => {
+      var possibleAnswers = [...item.incorrect_answers];
+      possibleAnswers.push(item.correct_answer);
+      shuffle(possibleAnswers);
+      possibleAnswers.forEach((answer, index) => {
         const answerItem = document.createElement('div');
         answerItem.className = 'cursor-pointer p-2 bg-blue-100 hover:bg-blue-200 rounded';
-        answerItem.textContent = answer.option;
-
-        // Event listener to handle the answer selection
+        answerItem.textContent = answer;
         answerItem.addEventListener('click', (event) => {
-          if (answerIndex === item.Correct_answer) {
+          if (possibleAnswers[index] === item.correct_answer) {
             event.target.className = 'p-2 bg-green-300 rounded';  // Change class to indicate correct answer
             resultMessage.textContent = 'Correct!';
             resultMessage.className = 'mt-4 text-lg font-bold text-green-500';
@@ -47,17 +48,16 @@ fetch('questions.json')
             }, 1000);  // Wait 1 second before showing the next question
           } else {
             event.target.className = 'p-2 bg-red-300 rounded';  // Change class to indicate incorrect answer
-            resultMessage.textContent = `Incorrect! ${answer.info}`;
+            resultMessage.textContent = `Incorrect!`;
             resultMessage.className = 'mt-4 text-lg font-bold text-red-500';
-          }
-        });
-
+          }  
+      });
         answersList.appendChild(answerItem);  // Add the answer item to the answers list
       });
 
       // Set the content of the category and question divs
       itemCategory.textContent = `Category: ${item.category}`;
-      itemQuestion.textContent = `${item.question_id}. ${item.question}`;
+      itemQuestion.textContent = `${index + 1}. ${item.question}`;
 
       // Append all elements to the container
       container.appendChild(itemCategory);
