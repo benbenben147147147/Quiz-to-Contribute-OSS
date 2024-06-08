@@ -4,42 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="output.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
   <link rel="icon" href="assets/images/earth.jpg" type="image/jpeg">
   <title>Quiz App</title>
 </head>
 
-<body class="bg-stone-300 flex flex-col items-center">
-  <nav class="nav__container">
-    <div></div>
-    <div class="nav__settings">
-      <a href="settings.html" class="flex items-center">
-        <img src="assets/images/gear-svgrepo-com.svg" alt="Settings">
-        <span>Settings</span>
-      </a>
-    </div>
-  </nav>
-  <div id="page">
+<body>
+  <div class="container">
+    <nav class="nav__container">
+      <div></div>
+      <div class="nav__settings">
+        <a href="settings.html" class="flex items-center">
+          <img src="assets/images/gear-svgrepo-com.svg" alt="Settings">
+          <span>Settings</span>
+        </a>
+      </div>
+    </nav>
     <div id="main">
-
       <div id="heading" class=" flex-col  text-center">
         <div id="time" style="text-align: right;font-size: 2em; margin-bottom: 10px">00:00</div>
         <h1 class="font-bold mt-2 items-center ml-15">Quiztopia</h1>
         <p class=" font-semibold mt-2 text-wrap">Upon completing this quiz, participants will gain a
           deeper understanding of various diverse concepts while enjoying the process.</p>
       </div>
-
-      <br><br><br><br>
       <div id="container">
-
+        <!-- Quiz content goes here -->
       </div>
     </div>
   </div>
-
-
+  <script type="module" src="js/index.js"></script>
+  <script src="js/timer.js"></script>
 </body>
-
-<script type="module" src="js/index.js"></script>
-<script src="js/timer.js"></script>
 
 </html>
