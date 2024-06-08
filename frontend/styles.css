@@ -1,62 +1,127 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* styles.css */
 body {
-  background-color: #dadada;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(163deg, #3457a1, #c5ddfb);
+
 }
 
-.nav__container {
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+
+}
+
+nav {
   display: flex;
-  width: 100%;
-  height: 100px;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.nav__settings img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-
-}
-
-.nav__settings a {
+nav .nav__settings a {
   display: flex;
   align-items: center;
-  /* Align items vertically centered */
+  font-weight: 600;
+  color: #040e14;
   text-decoration: none;
-  /* Remove underline from link */
-  color: inherit;
-  /* Inherit color for text */
 }
 
-@keyframes tilt-shaking {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(5deg);
-  }
-
-  50% {
-    transform: rotate(0deg);
-  }
-
-  75% {
-    transform: rotate(-5deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
+nav .nav__settings a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
 }
 
+h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
 
-div ul:hover {
-  animation: tilt-shaking 0.4s;
+p {
+  color: #666;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+#time {
+  text-align: right;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+button {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3498db;
+}
+
+
+
+/* Additional styles for the quiz elements */
+.item-category {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+}
+
+.item-question {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.answers-list {
+  margin-bottom: 1rem;
+}
+
+.answer-item {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: #eeeeee;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.answer-item:hover {
+  background-color: #dddddd;
+}
+
+.correct-answer {
+  background-color: #a5d6a7;
+}
+
+.incorrect-answer {
+  background-color: #ef9a9a;
+}
+
+.result-message {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
