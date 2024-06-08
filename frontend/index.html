@@ -4,42 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="output.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
   <link rel="icon" href="assets/images/earth.jpg" type="image/jpeg">
   <title>Quiz App</title>
 </head>
 
-<body class="bg-stone-300 flex flex-col items-center">
-  <nav class="nav__container">
-    <div></div>
-    <div class="nav__settings">
-      <a href="settings.html" class="flex items-center">
-        <img src="assets/images/gear-svgrepo-com.svg" alt="Settings">
-        <span>Settings</span>
-      </a>
-    </div>
-  </nav>
-  <div id="page">
-    <div id="main">
-
-      <div id="heading" class=" flex-col  text-center">
-        <div id="time" style="text-align: right;font-size: 2em; margin-bottom: 10px">00:00</div>
-        <h1 class="font-bold mt-2 items-center ml-15">Geography World Class Quiz</h1>
-        <p class=" font-semibold mt-2 text-wrap">Upon completing this quiz, participants will gain a
-          deeper understanding of various geographical concepts while enjoying the process.</p>
+<body>
+  <div class="container">
+    <nav class="nav__container">
+      <div></div>
+      <div class="nav__settings">
+        <a href="settings.html" class="flex items-center">
+          <img src="assets/images/gear-svgrepo-com.svg" alt="Settings">
+          <span>Settings</span>
+        </a>
       </div>
-
-      <br><br><br><br>
+    </nav>
+    <div id="main">
+      <div id="heading" class="flex flex-col text-center">
+        <div id="time" style="text-align: right; font-size: 2em; margin-bottom: 10px">00:00</div>
+        <h1 class="font-bold mt-2 items-center ml-15">Geography World Class Quiz</h1>
+        <p class="font-semibold mt-2 text-wrap">Upon completing this quiz, participants will gain a deeper understanding of various geographical concepts while enjoying the process.</p>
+      </div>
       <div id="container">
-
+        <!-- Quiz content goes here -->
       </div>
     </div>
   </div>
-
-
+  <script type="module" src="js/index.js"></script>
+  <script src="js/timer.js"></script>
 </body>
-
-<script type="module" src="js/index.js"></script>
-<script src="js/timer.js"></script>
 
 </html>
