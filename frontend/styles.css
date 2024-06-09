@@ -1,8 +1,9 @@
 /* styles.css */
+
 body {
   height: 100vh;
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Inter','Arial', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,8 +77,12 @@ button:hover {
   background-color: #3498db;
 }
 
-
-
+.quiz-overview-link{
+display: flex;
+text-decoration: none;
+color: black;
+font-weight: 600;
+}
 /* Additional styles for the quiz elements */
 .item-category {
   font-size: 1.25rem;
