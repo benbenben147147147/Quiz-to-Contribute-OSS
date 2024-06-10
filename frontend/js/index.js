@@ -76,6 +76,9 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
   possibleAnswers.push(item.correct_answer);
   shuffle(possibleAnswers);
 
+  // Flag to track if the user has already selected an incorrect answer
+  let isFirstTry = true;
+
   possibleAnswers.forEach((answer, index) => {
     const answerItem = document.createElement("div");
     answerItem.className = "answer-item";
@@ -85,8 +88,11 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
         event.target.className = "answer-item correct-answer";
         resultMessage.textContent = "Correct!";
         resultMessage.className = "result-message text-green-500";
+
+        if (isFirstTry) {
+          updateStatistics(true); // Update statistics for correct answer on the first try
+        }
         currentQuestionIndex++;
-        updateStatistics(true);
         setTimeout(() => {
           if (currentQuestionIndex < numberOfQuestions) {
             displayQuestion(data, currentQuestionIndex, container, currentQuestionIndex, numberOfQuestions);
@@ -99,6 +105,11 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
         event.target.className = "answer-item incorrect-answer";
         resultMessage.textContent = "Incorrect!";
         resultMessage.className = "result-message text-red-500";
+        if (isFirstTry) {
+          updateStatistics(false); // Update statistics for incorrect answer
+          isFirstTry = false; // Set flag to false after the first incorrect answer
+        }
+        displayStatistics(statisticsDisplay);
       }
     });
     answersList.appendChild(answerItem);
