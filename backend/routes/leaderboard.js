@@ -11,7 +11,7 @@ const leaderboardData = [
     {rank: 5, name: "Linda", score: 39}
 ]
 
-router.get('/leaderboard', (req, res) => {
+router.get('/api/leaderboard', (req, res) => {
     //console.log('GET /data request received');
     res.json(leaderboardData);
 });
