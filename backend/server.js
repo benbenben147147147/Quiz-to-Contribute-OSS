@@ -5,6 +5,11 @@ const app = express()
 
 const PORT = 3000
 
+// Import the leaderboard route
+const leaderboardRoute = require('./routes/leaderboard');
+
+app.use(leaderboardRoute);
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`)
 })
