@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const path = require('path')
+const fs = require('fs'); // Allows you to interact with the file system
 
 const app = express()
 app.use(cors())
@@ -26,6 +27,25 @@ app.post('/api/user', (req, res) => {
 
   res.status(200).json({ data: username, bio })
 })
+
+// New path to save questions
+app.post('/save-questions', (req, res) => {
+  const questions = req.body;
+
+  if (!questions) {
+    return res.status(400).send('No questions provided');
+  }
+
+  const filePath = path.join(__dirname, '../frontend/new_questions.json');
+
+  fs.writeFile(filePath, JSON.stringify(questions, null, 2), (err) => {
+    if (err) {
+      console.error('Error writing file', err);
+      return res.status(500).send('Error writing file');
+    }
+    res.send('Questions saved successfully');
+  });
+});
 
 app.use(leaderboardRoute);
 
