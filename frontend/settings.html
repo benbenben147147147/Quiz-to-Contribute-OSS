@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Settings</title>
-</head>
-<body class="min-h-screen flex flex-col justify-between">
+  </head>
+  <body class="min-h-screen flex flex-col justify-between">
     <h1 class="font-semibold text-center text-xl mb-4 py-3">Settings</h1>
 
-    <div class="flex-grow">
-        <label for="questions">How many questions do you wish to have ?</label>
-        <select name="questions" id="questions" aria-placeholder="Questions">
-          <option value="">Select</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
+    <div class="flex justify-center">
+      <label for="questions">How many questions do you wish to have ?</label>
+      <select name="questions" id="questions" aria-placeholder="Questions">
+        <option value="">Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
     </div>
 
     <div class="footer bg-red-200 py-4">
-        <button onclick="window.location.href = 'index.html'" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full ml-2 hover:bg-blue-700">Go back</button>
+      <button
+        onclick="window.location.href = 'index.html'"
+        class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full ml-2 hover:bg-blue-700"
+      >
+        Go back
+      </button>
     </div>
-</body>
+  </body>
 </html>
