@@ -16,20 +16,46 @@
     <h1 class="font-semibold text-center text-xl mb-4 py-3">Settings</h1>
 
     <div class="flex justify-center">
-      <label for="questions">How many questions do you wish to have ?</label>
-      <select name="questions" id="questions" aria-placeholder="Questions">
-        <option value="">Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
+      <div
+        class="h-full border border-slate-950 rounded-lg flex flex-col items-center w-1/4 py-5"
+      >
+        <div>
+          <div class="pb-2">Username</div>
+          <div class="border rounded-md mb-3">
+            <input id="username" type="text" placeholder="username" />
+          </div>
+        </div>
+        <div>
+          <div class="pb-2">Bio</div>
+          <div class="border rounded-md mb-3">
+            <textarea id="bio" class="w-full h-32"></textarea>
+          </div>
+        </div>
+
+        <label for="questions">How many questions do you wish to have ?</label>
+        <select name="questions" id="questions" aria-placeholder="Questions">
+          <option value="">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+
+        <div class="py-5">
+          <button
+            onclick="saveData()"
+            class="border rounded-xl bg-slate-800 text-slate-50 w-52"
+          >
+            Save
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="footer bg-red-200 py-4">
@@ -40,5 +66,31 @@
         Go back
       </button>
     </div>
+    <script>
+      async function saveData() {
+        const username = document.getElementById('username').value
+        const bio = document.getElementById('bio').value
+
+        const userData = {
+          username: username,
+          bio: bio,
+        }
+        console.log(userData)
+        try {
+          const response = await fetch('http://localhost:3000/api/user', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+          })
+
+          const data = await response.json()
+          console.log(data)
+        } catch (error) {
+          console.log(error)
+        }
+      }
+    </script>
   </body>
 </html>
