@@ -1,4 +1,6 @@
 import { shuffle } from "./shuffle.js";
+import { getStatistics, updateStatistics } from "./statistics.js";
+
 
 const MAX_QUESTIONS = 7;
 const QUESTIONS_BATCH_SIZE = 50;
@@ -74,6 +76,9 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
   possibleAnswers.push(item.correct_answer);
   shuffle(possibleAnswers);
 
+  // Flag to track if the user has already selected an incorrect answer
+  let isFirstTry = true;
+
   possibleAnswers.forEach((answer, index) => {
     const answerItem = document.createElement("div");
     answerItem.className = "answer-item";
@@ -83,6 +88,10 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
         event.target.className = "answer-item correct-answer";
         resultMessage.textContent = "Correct!";
         resultMessage.className = "result-message text-green-500";
+
+        if (isFirstTry) {
+          updateStatistics(true); // Update statistics for correct answer on the first try
+        }
         currentQuestionIndex++;
         setTimeout(() => {
           if (currentQuestionIndex < numberOfQuestions) {
@@ -96,6 +105,11 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
         event.target.className = "answer-item incorrect-answer";
         resultMessage.textContent = "Incorrect!";
         resultMessage.className = "result-message text-red-500";
+        if (isFirstTry) {
+          updateStatistics(false); // Update statistics for incorrect answer
+          isFirstTry = false; // Set flag to false after the first incorrect answer
+        }
+        displayStatistics(statisticsDisplay);
       }
     });
     answersList.appendChild(answerItem);
@@ -108,6 +122,24 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
   container.appendChild(itemQuestion);
   container.appendChild(answersList);
   container.appendChild(resultMessage);
+
+  displayStatistics(container);
+}
+// Function to display statistics
+function displayStatistics(container) {
+  const { totalQuestions, correctAnswers } = getStatistics();
+
+    const numCorrectDiv = document.createElement("div"); // Create a div for the result message
+
+    numCorrectDiv.textContent = `Total Questions: ${totalQuestions}, Correct Answers: ${correctAnswers}`;
+
+    numCorrectDiv.className = "num-correct text-200";
+    numCorrectDiv.style.paddingTop = "15px";
+    numCorrectDiv.style.textAlign = "left";
+    numCorrectDiv.style.fontWeight = "semibold";
+
+    container.appendChild(numCorrectDiv);
+  
 }
 
 // Function to save questions on the server
