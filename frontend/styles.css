@@ -130,3 +130,13 @@ font-weight: 600;
   font-size: 1.25rem;
   font-weight: bold;
 }
+
+/* To add hover effect over text */
+.hover{
+  transition: 0.2s;
+  &:hover{
+    opacity: 0.6;
+    /* letter-spacing: 5px; */
+    color:#430A5D !important;
+  }
+}
