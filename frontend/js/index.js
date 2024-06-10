@@ -1,4 +1,6 @@
 import { shuffle } from "./shuffle.js";
+import { getStatistics, updateStatistics } from "./statistics.js";
+
 
 const MAX_QUESTIONS = 7;
 const QUESTIONS_BATCH_SIZE = 50;
@@ -84,6 +86,7 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
         resultMessage.textContent = "Correct!";
         resultMessage.className = "result-message text-green-500";
         currentQuestionIndex++;
+        updateStatistics(true);
         setTimeout(() => {
           if (currentQuestionIndex < numberOfQuestions) {
             displayQuestion(data, currentQuestionIndex, container, currentQuestionIndex, numberOfQuestions);
@@ -108,6 +111,24 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
   container.appendChild(itemQuestion);
   container.appendChild(answersList);
   container.appendChild(resultMessage);
+
+  displayStatistics(container);
+}
+// Function to display statistics
+function displayStatistics(container) {
+  const { totalQuestions, correctAnswers } = getStatistics();
+
+    const numCorrectDiv = document.createElement("div"); // Create a div for the result message
+
+    numCorrectDiv.textContent = `Total Questions: ${totalQuestions}, Correct Answers: ${correctAnswers}`;
+
+    numCorrectDiv.className = "num-correct text-200";
+    numCorrectDiv.style.paddingTop = "15px";
+    numCorrectDiv.style.textAlign = "left";
+    numCorrectDiv.style.fontWeight = "semibold";
+
+    container.appendChild(numCorrectDiv);
+  
 }
 
 // Function to save questions on the server
