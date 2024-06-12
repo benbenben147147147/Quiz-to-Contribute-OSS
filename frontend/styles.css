@@ -7,12 +7,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(163deg, #3457a1, #c5ddfb);
+  background-image: url('./assets/images/6912325.jpg');
+  background-size: cover;
 
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #AEB7C0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 80%;
