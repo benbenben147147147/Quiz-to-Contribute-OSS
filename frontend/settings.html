@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Settings</title>
-</head>
-<body class="min-h-screen flex flex-col justify-between">
+  </head>
+  <body class="min-h-screen flex flex-col justify-between">
     <h1 class="font-semibold text-center text-xl mb-4 py-3">Settings</h1>
 
-    <div class="flex-grow">
+    <div class="flex justify-center">
+      <div
+        class="h-full border border-slate-950 rounded-lg flex flex-col items-center w-1/4 py-5"
+      >
+        <div>
+          <div class="pb-2">Username</div>
+          <div class="border rounded-md mb-3">
+            <input id="username" type="text" placeholder="username" />
+          </div>
+        </div>
+        <div>
+          <div class="pb-2">Bio</div>
+          <div class="border rounded-md mb-3">
+            <textarea id="bio" class="w-full h-32"></textarea>
+          </div>
+        </div>
+
         <label for="questions">How many questions do you wish to have ?</label>
         <select name="questions" id="questions" aria-placeholder="Questions">
           <option value="">Select</option>
@@ -27,10 +46,51 @@
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
+
+        <div class="py-5">
+          <button
+            onclick="saveData()"
+            class="border rounded-xl bg-slate-800 text-slate-50 w-52"
+          >
+            Save
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="footer bg-red-200 py-4">
-        <button onclick="window.location.href = 'index.html'" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full ml-2 hover:bg-blue-700">Go back</button>
+      <button
+        onclick="window.location.href = 'index.html'"
+        class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full ml-2 hover:bg-blue-700"
+      >
+        Go back
+      </button>
     </div>
-</body>
+    <script>
+      async function saveData() {
+        const username = document.getElementById('username').value
+        const bio = document.getElementById('bio').value
+
+        const userData = {
+          username: username,
+          bio: bio,
+        }
+        console.log(userData)
+        try {
+          const response = await fetch('http://localhost:3000/api/user', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+          })
+
+          const data = await response.json()
+          console.log(data)
+        } catch (error) {
+          console.log(error)
+        }
+      }
+    </script>
+  </body>
 </html>

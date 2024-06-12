@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/images/earth.jpg" type="image/jpeg">
+    <title>Leaderboard</title>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between">
+    <h1 class="font-semibold text-center text-xl mb-4 py-3">Leaderboard</h1>
+
+    <table class="shadow-lg bg-white">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody id="data-table">
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+
+    <div class="footer bg-red-200 py-4">
+
+    </div>
+    <script src="js/leaderboard.js"></script>    
+</body>
+
+</html>

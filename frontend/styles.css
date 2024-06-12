@@ -9,7 +9,6 @@ body {
   align-items: center;
   background-image: url('./assets/images/6912325.jpg');
   background-size: cover;
-
 }
 
 .container {
@@ -130,4 +129,14 @@ font-weight: 600;
   margin-top: 1rem;
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+/* To add hover effect over text */
+.hover{
+  transition: 0.2s;
+  &:hover{
+    opacity: 0.6;
+    /* letter-spacing: 5px; */
+    color:#430A5D !important;
+  }
 }
