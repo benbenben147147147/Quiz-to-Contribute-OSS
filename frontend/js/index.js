@@ -1,7 +1,6 @@
 import { shuffle } from "./shuffle.js";
 import { getStatistics, updateStatistics } from "./statistics.js";
 
-
 const MAX_QUESTIONS = 7;
 const QUESTIONS_BATCH_SIZE = 50;
 const TOTAL_QUESTIONS = 100; // Total number of desired questions
@@ -13,7 +12,9 @@ async function fetchQuestions() {
 
   // Make the first request immediately
   const initialAmount = Math.min(QUESTIONS_BATCH_SIZE, questionsToFetch);
-  let response = await fetch(`https://opentdb.com/api.php?amount=${initialAmount}&category=22&type=multiple`);
+  let response = await fetch(
+    `https://opentdb.com/api.php?amount=${initialAmount}&category=22&type=multiple`
+  );
   let data = await response.json();
   allQuestions = allQuestions.concat(data.results);
   questionsToFetch -= initialAmount;
@@ -22,13 +23,15 @@ async function fetchQuestions() {
   const fetchAdditionalQuestions = async () => {
     while (questionsToFetch > 0) {
       const amount = Math.min(QUESTIONS_BATCH_SIZE, questionsToFetch);
-      response = await fetch(`https://opentdb.com/api.php?amount=${amount}&category=22&type=multiple`);
+      response = await fetch(
+        `https://opentdb.com/api.php?amount=${amount}&category=22&type=multiple`
+      );
       data = await response.json();
       allQuestions = allQuestions.concat(data.results);
       questionsToFetch -= amount;
       // Wait 5 seconds before the next request if more questions are required.
       if (questionsToFetch > 0) {
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        await new Promise((resolve) => setTimeout(resolve, 5000));
       }
     }
   };
@@ -37,11 +40,13 @@ async function fetchQuestions() {
   fetchAdditionalQuestions();
 
   // Decode HTML entities before saving
-  const decodedQuestions = allQuestions.map(question => ({
+  const decodedQuestions = allQuestions.map((question) => ({
     ...question,
     question: decodeHtml(question.question),
     correct_answer: decodeHtml(question.correct_answer),
-    incorrect_answers: question.incorrect_answers.map(answer => decodeHtml(answer))
+    incorrect_answers: question.incorrect_answers.map((answer) =>
+      decodeHtml(answer)
+    ),
   }));
 
   // Save questions on the server
@@ -58,7 +63,13 @@ function decodeHtml(html) {
 }
 
 // Function to display a question
-function displayQuestion(data, index, container, currentQuestionIndex, numberOfQuestions) {
+function displayQuestion(
+  data,
+  index,
+  container,
+  currentQuestionIndex,
+  numberOfQuestions
+) {
   const item = data[index];
   container.innerHTML = "";
 
@@ -80,6 +91,7 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
   let isFirstTry = true;
 
   possibleAnswers.forEach((answer, index) => {
+    const { totalQuestions, correctAnswers } = getStatistics();
     const answerItem = document.createElement("div");
     answerItem.className = "answer-item";
     answerItem.textContent = decodeHtml(answer); // Decode response
@@ -95,9 +107,20 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
         currentQuestionIndex++;
         setTimeout(() => {
           if (currentQuestionIndex < numberOfQuestions) {
-            displayQuestion(data, currentQuestionIndex, container, currentQuestionIndex, numberOfQuestions);
+            displayQuestion(
+              data,
+              currentQuestionIndex,
+              container,
+              currentQuestionIndex,
+              numberOfQuestions
+            );
           } else {
-            container.innerHTML = '<div class="text-lg font-bold text-center text-gray-800">Quiz Completed!</div>';
+            const scoreMessage =
+              correctAnswers >= totalQuestions * 0.6
+                ? `You scored ${correctAnswers}/${totalQuestions}. <span style="color: green; font-weight: bold;">You passed!</span>`
+                : `You scored ${correctAnswers}/${totalQuestions}. <a href="javascript:location.reload()" style="color: red; font-weight: bold;">Try again!</a>`;
+            container.innerHTML = `<p style="font-size: 20px; font-family: Arial, sans-serif; margin-bottom: 20px;">${scoreMessage}</p>
+            <div class="text-lg font-bold text-center text-gray-800">Quiz Completed!</div>`;
             clearInterval(window.intervalId);
           }
         }, 1000);
@@ -129,43 +152,48 @@ function displayQuestion(data, index, container, currentQuestionIndex, numberOfQ
 function displayStatistics(container) {
   const { totalQuestions, correctAnswers } = getStatistics();
 
-    const numCorrectDiv = document.createElement("div"); // Create a div for the result message
+  const numCorrectDiv = document.createElement("div"); // Create a div for the result message
 
-    numCorrectDiv.textContent = `Total Questions: ${totalQuestions}, Correct Answers: ${correctAnswers}`;
+  numCorrectDiv.textContent = `Total Questions: ${totalQuestions}, Score: ${correctAnswers}`;
 
-    numCorrectDiv.className = "num-correct text-200";
-    numCorrectDiv.style.paddingTop = "15px";
-    numCorrectDiv.style.textAlign = "left";
-    numCorrectDiv.style.fontWeight = "semibold";
+  numCorrectDiv.className = "num-correct text-200";
+  numCorrectDiv.style.paddingTop = "15px";
+  numCorrectDiv.style.textAlign = "left";
+  numCorrectDiv.style.fontWeight = "semibold";
 
-    container.appendChild(numCorrectDiv);
-  
+  container.appendChild(numCorrectDiv);
 }
 
 // Function to save questions on the server
 async function saveQuestions(questions) {
   try {
-    const response = await fetch('/save-questions', {
-      method: 'POST',
+    const response = await fetch("/save-questions", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(questions),
     });
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
-    console.log('Questions saved successfully');
+    console.log("Questions saved successfully");
   } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
+    console.error("There was a problem with the fetch operation:", error);
   }
 }
 
 // Fetch questions and display the first one
-fetchQuestions().then(data => {
+fetchQuestions().then((data) => {
   const numberOfQuestions = Math.min(MAX_QUESTIONS, data.length);
   let currentQuestionIndex = 0;
   const container = document.getElementById("container");
 
-  displayQuestion(data, currentQuestionIndex, container, currentQuestionIndex, numberOfQuestions);
+  displayQuestion(
+    data,
+    currentQuestionIndex,
+    container,
+    currentQuestionIndex,
+    numberOfQuestions
+  );
 });
