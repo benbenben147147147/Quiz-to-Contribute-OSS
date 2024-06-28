@@ -19,7 +19,6 @@ body {
   max-width: 600px;
   padding: 20px;
   text-align: center;
-
 }
 
 nav {
@@ -43,10 +42,14 @@ nav .nav__settings a img {
   margin-right: 5px;
 }
 
-h1 {
+.indexHeader {
   color: #333;
   font-size: 2em;
   margin-bottom: 10px;
+}
+
+.overviewHeader {
+  color: #fff;
 }
 
 p {
@@ -79,10 +82,10 @@ button:hover {
 
 .quiz-overview-link{
 display: flex;
-text-decoration: none;
-color: black;
+text-decoration: none;color: black;
 font-weight: 600;
 }
+
 /* Additional styles for the quiz elements */
 .item-category {
   font-size: 1.25rem;
@@ -139,4 +142,78 @@ font-weight: 600;
     /* letter-spacing: 5px; */
     color:#430A5D !important;
   }
+}
+
+.footer {  /* Added this to position the arrow button better */
+  position: absolute;
+  bottom: 3%; /* Adjust this to position the footer as needed */
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 4%; 
+}
+
+.back-button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  padding-left: 5px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back-button:hover {
+  animation: borderAnimation 2s ease forwards;
+}
+
+.back-button::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-left: 3px solid white;
+  border-top: 3px solid white;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@keyframes borderAnimation {
+  0% {
+      border-color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+      border-color: rgba(255, 255, 255, 1);
+  }
+  100% {
+      border-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes arrowAnimation {
+  0% {
+      transform: translateX(0) rotate(-45deg);
+      opacity: 1;
+  }
+  50% {
+      transform: translateX(-20px) rotate(-45deg);
+      opacity: 0;
+  }
+  51% {
+      transform: translateX(20px) rotate(-45deg);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0) rotate(-45deg);
+      opacity: 1;
+  }
+}
+
+.back-button:hover::before {
+  animation: arrowAnimation 0.6s ease forwards;
 }

@@ -6,22 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="assets/images/earth.jpg" type="image/jpeg">
     <title>Quiz Overview</title>
 </head>
 
 <body class="min-h-screen flex flex-col justify-between">
-    <h1 class="font-semibold text-center text-xl mb-4 py-3">Quiz Overview</h1>
+    <h1 class="overviewHeader font-semibold text-center text-xl mt-5 pr-20" style="font-size: 150%;">Quiz Overview</h1>
 
     <div class="flex-grow">
 
     </div>
 
     <div class="footer py-4">
-        <button onclick="window.location.href = 'index.html'"
-            class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-full ml-2 hover:bg-blue-700">Go
-            back</button>
-    </div>
-</body>
+            <button class="back-button" onclick="window.location.href = 'index.html'"></button>
 
+            <!-- Leaving the js code below in case the button onClick is meant to go back, instead of index.html
+             <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script> -->
+    </div>
+
+</body>
 </html>
